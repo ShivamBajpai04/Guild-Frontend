@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Guilds from "./pages/guilds";
 import GuildDetail from "./components/guildDetail";
-// import Quests from "./pages/quests";
-// import QuestDetail from "./components/questDetails";
+import Quests from "./pages/quests";
+import QuestDetail from "./components/questDetails";
 
 function App() {
 	return (
@@ -14,8 +14,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/guilds" element={<Guilds />} />
           <Route path="/guilds/:id" element={<GuildDetail />} />
-          {/* <Route path="/quests" element={<Quests />} />
-          <Route path="/quests/:id" element={<QuestDetail />} /> */}
+          <Route path="/guild/quests" element={<Quests/>}/>
+          <Route path="/guild/quests/:id" element={<QuestDetail />}/>
         </Routes>
       </div>
     </Router>
